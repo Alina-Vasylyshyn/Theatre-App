@@ -1,12 +1,12 @@
 package theatre.spring.service.impl;
 
-import theatre.spring.model.Role;
-import theatre.spring.model.User;
-import theatre.spring.service.UserService;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+import theatre.spring.model.Role;
+import theatre.spring.model.User;
+import theatre.spring.service.UserService;
 
 @Service
 public class CustomUserDetailsService implements UserDetailsService {

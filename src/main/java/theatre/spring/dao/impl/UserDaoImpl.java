@@ -1,14 +1,14 @@
 package theatre.spring.dao.impl;
 
 import java.util.Optional;
-import theatre.spring.dao.AbstractDao;
-import theatre.spring.dao.UserDao;
-import theatre.spring.exception.DataProcessingException;
-import theatre.spring.model.User;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 import org.springframework.stereotype.Repository;
+import theatre.spring.dao.AbstractDao;
+import theatre.spring.dao.UserDao;
+import theatre.spring.exception.DataProcessingException;
+import theatre.spring.model.User;
 
 @Repository
 public class UserDaoImpl extends AbstractDao<User> implements UserDao {

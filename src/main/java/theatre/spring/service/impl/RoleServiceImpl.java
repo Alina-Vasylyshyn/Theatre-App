@@ -1,10 +1,10 @@
 package theatre.spring.service.impl;
 
+import org.springframework.stereotype.Service;
 import theatre.spring.dao.RoleDao;
 import theatre.spring.exception.DataProcessingException;
 import theatre.spring.model.Role;
 import theatre.spring.service.RoleService;
-import org.springframework.stereotype.Service;
 
 @Service
 public class RoleServiceImpl implements RoleService {

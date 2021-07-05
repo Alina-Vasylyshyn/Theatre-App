@@ -1,11 +1,11 @@
 package theatre.spring.service.impl;
 
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
 import theatre.spring.dao.UserDao;
 import theatre.spring.exception.DataProcessingException;
 import theatre.spring.model.User;
 import theatre.spring.service.UserService;
-import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.stereotype.Service;
 
 @Service
 public class UserServiceImpl implements UserService {

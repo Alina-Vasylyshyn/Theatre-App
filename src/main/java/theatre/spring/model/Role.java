@@ -2,8 +2,6 @@ package theatre.spring.model;
 
 import java.util.Objects;
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -14,14 +12,12 @@ public class Role {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    @Enumerated(value = EnumType.STRING)
-    private RoleName roleName;
 
     public Role() {
     }
 
-    public Role(RoleName roleName) {
-        this.roleName = roleName;
+    public Role(String name) {
+        this.name = name;
     }
 
     public Long getId() {
@@ -49,13 +45,12 @@ public class Role {
             return false;
         }
         Role role = (Role) o;
-        return Objects.equals(id, role.id)
-                && Objects.equals(name, role.name) && roleName == role.roleName;
+        return Objects.equals(id, role.id) && Objects.equals(name, role.name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, roleName);
+        return Objects.hash(id, name);
     }
 
     @Override
@@ -66,7 +61,4 @@ public class Role {
                 + '}';
     }
 
-    public enum RoleName {
-        ADMIN, USER;
-    }
 }

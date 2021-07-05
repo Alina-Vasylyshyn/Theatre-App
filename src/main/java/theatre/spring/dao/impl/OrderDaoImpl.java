@@ -1,15 +1,15 @@
 package theatre.spring.dao.impl;
 
 import java.util.List;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
+import org.springframework.stereotype.Repository;
 import theatre.spring.dao.AbstractDao;
 import theatre.spring.dao.OrderDao;
 import theatre.spring.exception.DataProcessingException;
 import theatre.spring.model.Order;
 import theatre.spring.model.User;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.query.Query;
-import org.springframework.stereotype.Repository;
 
 @Repository
 public class OrderDaoImpl extends AbstractDao<Order> implements OrderDao {

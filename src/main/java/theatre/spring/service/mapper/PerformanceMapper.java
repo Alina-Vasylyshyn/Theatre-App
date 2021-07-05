@@ -1,9 +1,9 @@
 package theatre.spring.service.mapper;
 
+import org.springframework.stereotype.Component;
 import theatre.spring.dto.request.PerformanceRequestDto;
 import theatre.spring.dto.response.PerformanceResponseDto;
 import theatre.spring.model.Performance;
-import org.springframework.stereotype.Component;
 
 @Component
 public class PerformanceMapper implements RequestDtoMapper<PerformanceRequestDto, Performance>,

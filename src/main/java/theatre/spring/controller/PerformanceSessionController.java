@@ -4,12 +4,6 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
 import javax.validation.Valid;
-import theatre.spring.dto.request.PerformanceSessionDto;
-import theatre.spring.dto.response.PerformanceSessionResponseDto;
-import theatre.spring.model.PerformanceSession;
-import theatre.spring.service.PerformanceSessionService;
-import theatre.spring.service.mapper.PerformanceSessionMapper;
-import theatre.spring.util.DateTimePatternUtil;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,6 +14,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import theatre.spring.dto.request.PerformanceSessionDto;
+import theatre.spring.dto.response.PerformanceSessionResponseDto;
+import theatre.spring.model.PerformanceSession;
+import theatre.spring.service.PerformanceSessionService;
+import theatre.spring.service.mapper.PerformanceSessionMapper;
+import theatre.spring.util.DateTimePatternUtil;
 
 @RestController
 @RequestMapping("/performance-session")
@@ -54,7 +54,7 @@ public class PerformanceSessionController {
 
     @PutMapping("/{id}")
     public PerformanceSessionResponseDto update(@PathVariable Long id,
-                                                @RequestBody @Valid PerformanceSessionDto requestDto) {
+            @RequestBody @Valid PerformanceSessionDto requestDto) {
         PerformanceSession movieSession = performanceSessionMapper.mapToModel(requestDto);
         movieSession.setId(id);
         performanceSessionService.update(movieSession);

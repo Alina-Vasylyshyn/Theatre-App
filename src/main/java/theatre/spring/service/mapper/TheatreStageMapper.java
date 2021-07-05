@@ -1,9 +1,9 @@
 package theatre.spring.service.mapper;
 
+import org.springframework.stereotype.Component;
 import theatre.spring.dto.request.TheatreStageRequestDto;
 import theatre.spring.dto.response.TheatreStageResponseDto;
 import theatre.spring.model.TheatreStage;
-import org.springframework.stereotype.Component;
 
 @Component
 public class TheatreStageMapper implements RequestDtoMapper<TheatreStageRequestDto, TheatreStage>,

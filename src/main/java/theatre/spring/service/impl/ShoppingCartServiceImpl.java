@@ -1,5 +1,6 @@
 package theatre.spring.service.impl;
 
+import org.springframework.stereotype.Service;
 import theatre.spring.dao.ShoppingCartDao;
 import theatre.spring.dao.TicketDao;
 import theatre.spring.model.PerformanceSession;
@@ -7,7 +8,6 @@ import theatre.spring.model.ShoppingCart;
 import theatre.spring.model.Ticket;
 import theatre.spring.model.User;
 import theatre.spring.service.ShoppingCartService;
-import org.springframework.stereotype.Service;
 
 @Service
 public class ShoppingCartServiceImpl implements ShoppingCartService {

@@ -1,13 +1,12 @@
 package theatre.spring.service.impl;
 
 import java.util.Set;
-import theatre.spring.model.Role;
+import org.springframework.stereotype.Service;
 import theatre.spring.model.User;
 import theatre.spring.service.AuthenticationService;
 import theatre.spring.service.RoleService;
 import theatre.spring.service.ShoppingCartService;
 import theatre.spring.service.UserService;
-import org.springframework.stereotype.Service;
 
 @Service
 public class AuthenticationServiceImpl implements AuthenticationService {
@@ -28,7 +27,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
         User user = new User();
         user.setEmail(email);
         user.setPassword(password);
-        user.setRoles(Set.of(roleService.getRoleByName(String.valueOf(Role.RoleName.USER))));
+        user.setRoles(Set.of(roleService.getRoleByName("USER")));
         userService.add(user);
         shoppingCartService.registerNewShoppingCart(user);
         return user;

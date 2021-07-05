@@ -1,8 +1,8 @@
 package theatre.spring.service.mapper;
 
+import org.springframework.stereotype.Component;
 import theatre.spring.dto.response.UserResponseDto;
 import theatre.spring.model.User;
-import org.springframework.stereotype.Component;
 
 @Component
 public class UserMapper implements ResponseDtoMapper<UserResponseDto, User> {

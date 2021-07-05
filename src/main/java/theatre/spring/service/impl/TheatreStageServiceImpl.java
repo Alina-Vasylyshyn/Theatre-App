@@ -1,11 +1,11 @@
 package theatre.spring.service.impl;
 
 import java.util.List;
+import org.springframework.stereotype.Service;
 import theatre.spring.dao.TheatreStageDao;
 import theatre.spring.exception.DataProcessingException;
 import theatre.spring.model.TheatreStage;
 import theatre.spring.service.TheatreStageService;
-import org.springframework.stereotype.Service;
 
 @Service
 public class TheatreStageServiceImpl implements TheatreStageService {

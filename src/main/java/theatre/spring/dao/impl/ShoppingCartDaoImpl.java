@@ -1,14 +1,14 @@
 package theatre.spring.dao.impl;
 
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
+import org.springframework.stereotype.Repository;
 import theatre.spring.dao.AbstractDao;
 import theatre.spring.dao.ShoppingCartDao;
 import theatre.spring.exception.DataProcessingException;
 import theatre.spring.model.ShoppingCart;
 import theatre.spring.model.User;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.query.Query;
-import org.springframework.stereotype.Repository;
 
 @Repository
 public class ShoppingCartDaoImpl extends AbstractDao<ShoppingCart> implements ShoppingCartDao {

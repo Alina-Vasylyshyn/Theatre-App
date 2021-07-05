@@ -2,10 +2,10 @@ package theatre.spring.dao;
 
 import java.util.List;
 import java.util.Optional;
-import theatre.spring.exception.DataProcessingException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import theatre.spring.exception.DataProcessingException;
 
 public abstract class AbstractDao<T> {
     protected final SessionFactory factory;

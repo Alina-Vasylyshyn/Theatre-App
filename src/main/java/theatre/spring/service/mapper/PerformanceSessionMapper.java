@@ -2,23 +2,25 @@ package theatre.spring.service.mapper;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import org.springframework.stereotype.Component;
 import theatre.spring.dto.request.PerformanceSessionDto;
 import theatre.spring.dto.response.PerformanceSessionResponseDto;
 import theatre.spring.model.PerformanceSession;
-import theatre.spring.service.TheatreStageService;
 import theatre.spring.service.PerformanceService;
+import theatre.spring.service.TheatreStageService;
 import theatre.spring.util.DateTimePatternUtil;
-import org.springframework.stereotype.Component;
 
 @Component
-public class PerformanceSessionMapper implements RequestDtoMapper<PerformanceSessionDto, PerformanceSession>,
+public class PerformanceSessionMapper implements RequestDtoMapper<PerformanceSessionDto,
+        PerformanceSession>,
         ResponseDtoMapper<PerformanceSessionResponseDto, PerformanceSession> {
     private final DateTimeFormatter formatter =
             DateTimeFormatter.ofPattern(DateTimePatternUtil.DATE_TIME_PATTERN);
     private final TheatreStageService cinemaHallService;
     private final PerformanceService movieService;
 
-    public PerformanceSessionMapper(TheatreStageService cinemaHallService, PerformanceService movieService) {
+    public PerformanceSessionMapper(TheatreStageService cinemaHallService,
+                                    PerformanceService movieService) {
         this.cinemaHallService = cinemaHallService;
         this.movieService = movieService;
     }

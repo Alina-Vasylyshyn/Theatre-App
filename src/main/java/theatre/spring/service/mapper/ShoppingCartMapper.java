@@ -1,10 +1,10 @@
 package theatre.spring.service.mapper;
 
 import java.util.stream.Collectors;
+import org.springframework.stereotype.Component;
 import theatre.spring.dto.response.ShoppingCartResponseDto;
 import theatre.spring.model.ShoppingCart;
 import theatre.spring.model.Ticket;
-import org.springframework.stereotype.Component;
 
 @Component
 public class ShoppingCartMapper implements

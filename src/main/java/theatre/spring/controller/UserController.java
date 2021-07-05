@@ -1,13 +1,13 @@
 package theatre.spring.controller;
 
-import theatre.spring.dto.response.UserResponseDto;
-import theatre.spring.model.User;
-import theatre.spring.service.UserService;
-import theatre.spring.service.mapper.UserMapper;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import theatre.spring.dto.response.UserResponseDto;
+import theatre.spring.model.User;
+import theatre.spring.service.UserService;
+import theatre.spring.service.mapper.UserMapper;
 
 @RestController
 @RequestMapping("/users")

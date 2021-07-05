@@ -2,11 +2,11 @@ package theatre.spring.service.impl;
 
 import java.time.LocalDate;
 import java.util.List;
+import org.springframework.stereotype.Service;
 import theatre.spring.dao.PerformanceSessionDao;
 import theatre.spring.exception.DataProcessingException;
 import theatre.spring.model.PerformanceSession;
 import theatre.spring.service.PerformanceSessionService;
-import org.springframework.stereotype.Service;
 
 @Service
 public class PerformanceSessionServiceImpl implements PerformanceSessionService {

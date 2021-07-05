@@ -1,12 +1,5 @@
 package theatre.spring.controller;
 
-import theatre.spring.dto.response.ShoppingCartResponseDto;
-import theatre.spring.model.PerformanceSession;
-import theatre.spring.model.User;
-import theatre.spring.service.PerformanceSessionService;
-import theatre.spring.service.ShoppingCartService;
-import theatre.spring.service.UserService;
-import theatre.spring.service.mapper.ShoppingCartMapper;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,6 +7,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import theatre.spring.dto.response.ShoppingCartResponseDto;
+import theatre.spring.model.PerformanceSession;
+import theatre.spring.model.User;
+import theatre.spring.service.PerformanceSessionService;
+import theatre.spring.service.ShoppingCartService;
+import theatre.spring.service.UserService;
+import theatre.spring.service.mapper.ShoppingCartMapper;
 
 @RestController
 @RequestMapping("/shopping-carts")

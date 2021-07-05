@@ -1,14 +1,14 @@
 package theatre.spring.controller;
 
 import javax.validation.Valid;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 import theatre.spring.dto.request.UserRequestDto;
 import theatre.spring.dto.response.UserResponseDto;
 import theatre.spring.model.User;
 import theatre.spring.service.AuthenticationService;
 import theatre.spring.service.mapper.UserMapper;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class AuthenticationController {

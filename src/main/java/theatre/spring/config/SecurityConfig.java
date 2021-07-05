@@ -1,6 +1,5 @@
 package theatre.spring.config;
 
-import theatre.spring.model.Role;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -30,17 +29,18 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .antMatchers("/register", "/inject").permitAll()
                 .antMatchers(HttpMethod.GET, "/performance",
-                        "/performance-session", "/theatre-stage").hasAnyRole(Role.RoleName.ADMIN.name(),
-                Role.RoleName.USER.name())
-                .antMatchers(HttpMethod.POST,"/performance", "/performance-session", "/theatre-stage")
-                .hasRole(Role.RoleName.ADMIN.name())
-                .antMatchers(HttpMethod.GET, "/by-email").hasRole(Role.RoleName.ADMIN.name())
+                        "/performance-session", "/theatre-stage").hasAnyRole("ADMIN",
+                "USER")
+                .antMatchers(HttpMethod.POST,"/performance", "/performance-session",
+                         "/theatre-stage")
+                .hasRole("ADMIN")
+                .antMatchers(HttpMethod.GET, "/by-email").hasRole("ADMIN")
                 .antMatchers(HttpMethod.POST, "/complete",
-                        "/shopping-carts/performance-session").hasRole(Role.RoleName.USER.name())
+                        "/shopping-carts/performance-session").hasRole("USER")
                 .antMatchers(HttpMethod.PUT, "/performance-session")
-                .hasRole(Role.RoleName.ADMIN.name())
+                .hasRole("ADMIN")
                 .antMatchers(HttpMethod.DELETE, "/performance-session")
-                .hasRole(Role.RoleName.ADMIN.name())
+                .hasRole("ADMIN")
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()

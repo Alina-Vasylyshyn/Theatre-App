@@ -2,14 +2,14 @@ package theatre.spring.controller;
 
 import java.util.Locale;
 import java.util.Set;
-import theatre.spring.model.Role;
-import theatre.spring.model.User;
-import theatre.spring.service.RoleService;
-import theatre.spring.service.UserService;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import theatre.spring.model.Role;
+import theatre.spring.model.User;
+import theatre.spring.service.RoleService;
+import theatre.spring.service.UserService;
 
 @RestController
 @RequestMapping
@@ -31,11 +31,11 @@ public class InjectController {
     @GetMapping("/inject")
     public String injectData() {
         Role adminRole = new Role();
-        adminRole.setName(Role.RoleName.ADMIN.name());
+        adminRole.setName("ROLE_ADMIN");
         roleService.add(adminRole);
 
         Role userRole = new Role();
-        userRole.setName(Role.RoleName.USER.name());
+        userRole.setName("ROLE_USER");
         roleService.add(userRole);
 
         User bob = new User();
